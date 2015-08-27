@@ -1,0 +1,85 @@
+<div ui-view class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="http://placehold.it/300x300">
+        </div>
+        <div class="col-md-4">
+            <img src="http://placehold.it/300x300">
+        </div>
+        <div class="col-md-4">
+            <img src="http://placehold.it/300x300">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Most critical risks</h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li>{{ one }}</li>
+                        <li>{{ two }}</li>
+                        <li>{{ three }}</li>
+                    </ul>
+                    <a href="#" class="btn">All risks</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3>Tasks</h3>
+            <a ui-sref=".list" class="btn btn-primary">List</a>
+            <a ui-sref=".paragraph" class="btn btn-danger">Paragraph</a>
+            <ul>
+                <li ng-repeat="dog in dogs">{{ dog }}</li>
+            </ul>
+            <ul>
+                <li>One</li>
+                <li>Two</li>
+                <li>Three</li>
+            </ul>
+            <a href="#" class="btn">All tasks</a>
+        </div>
+        <div class="col-md-4">
+            <h3>Updates</h3>
+            <ul>
+                <li>
+                    <h4>First</h4>
+                    <p>Update info</p>
+                    <a href="#">View entire update</a>
+                </li>
+                <li>
+                    <h4>Second</h4>
+                    <p>Update info</p>
+                    <a href="#">View entire update</a>
+                </li>
+                <li>
+                    <h4>Third</h4>
+                    <p>Update info</p>
+                    <a href="#">View entire update</a>
+                </li>
+            </ul>
+            <a href="#" class="btn">All updates</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Projects/Processes</h1> - <a href="#" class="">All projects</a> - <a href="#" class="">All Processes</a>
+        </div>
+        <div class="col-md-4">
+            <h2>Project 1</h2>
+            <p>Project stuff</p>
+            <p>some more stuff</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Project 1</h2>
+            <p>Project stuff</p>
+            <p>some more stuff</p>
+        </div>
+        <div class="col-md-4">
+            <h2>Project 1</h2>
+            <p>Project stuff</p>
+            <p>some more stuff</p>
+        </div>
+    </div>
+</div>

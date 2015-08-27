@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="eRockApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>E-Rock</title>
+    <base href="/">
+
+    <!-- based on: https://github.com/angular/angular-phonecat -->
+
+    <!-- load bootstrap from CDN and custom CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- load angular and angular-route via CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+
+    <!--<script src="js/animations.js"></script>-->
+    <script src="components/company/companyCtrl.js"></script>
+    <script src="components/personal/personalCtrl.js"></script>
+
+    <script src="shared/projects/myProjectsCtrl.js"></script>
+    <script src="shared/table-data/table-dataCtrl.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="nav navbar-nav">
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li ng-repeat="item in items" ng-class="{'dropdown-submenu': item.submenu && item.submenu.length}"><a ui-sref="{{item.link}}">{{item.name}}</a>
+                            <ul ng-if="item.submenu && item.submenu.length" class="dropdown-menu">
+                                <li ng-repeat="subitem in item.submenu"><a ui-sref="{{subitem.link}}">{{subitem.name}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="personal" ui-sref-active="active">Personal</a></li>
+                    <li><a ui-sref="company">Company</a></li>
+                </ul>
+            </div>
+            <div class="row" ng-show="">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a ui-sref="personal">Overview</a></li>
+                    <li><a ui-sref="personal.my-projects">My Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="view-container">
+        <div class="container">
+            <div class="row">
+                <div ui-view></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <p>I'm the footer</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

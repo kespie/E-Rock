@@ -1,0 +1,19 @@
+{
+  "name": "e-rock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kespie/E-Rock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kespie/E-Rock/issues"
+  },
+  "homepage": "https://github.com/kespie/E-Rock#readme"
+}

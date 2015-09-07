@@ -1,85 +1,153 @@
-<div ui-view class="container">
+
+<div class="container">
     <div class="row">
-        <div class="col-md-4">
-            <img src="http://placehold.it/300x300">
-        </div>
-        <div class="col-md-4">
-            <img src="http://placehold.it/300x300">
-        </div>
-        <div class="col-md-4">
-            <img src="http://placehold.it/300x300">
+        <div class="col-md-12">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a ui-sref="personal">Overview</a></li>
+                <li><a ui-sref="personal.projects" ui-sref-active="active">Projects</a></li>
+                <li><a ui-sref="personal.risks" ui-sref-active="active">Risks</a></li>
+            </ul>
         </div>
     </div>
-    <div class="row">
+    <div class="row top-buffer">
+        <div clas="col-md-12">
+            <div ncy-breadcrumb></div>
+        </div>
+    </div>
+    <div class="row top-buffer homepage-rij1">
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Most critical risks</h3>
+                    <h3 class="panel-title">Company KPI</h3>
+                    <p>Weighted order value</p>
                 </div>
                 <div class="panel-body">
-                    <ul>
-                        <li>{{ one }}</li>
-                        <li>{{ two }}</li>
-                        <li>{{ three }}</li>
-                    </ul>
-                    <a href="#" class="btn">All risks</a>
+                    <div ui-view="lineChart"></div>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <h3>Tasks</h3>
-            <a ui-sref=".list" class="btn btn-primary">List</a>
-            <a ui-sref=".paragraph" class="btn btn-danger">Paragraph</a>
-            <ul>
-                <li ng-repeat="dog in dogs">{{ dog }}</li>
-            </ul>
-            <ul>
-                <li>One</li>
-                <li>Two</li>
-                <li>Three</li>
-            </ul>
-            <a href="#" class="btn">All tasks</a>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Company KPI</h3>
+                    <p>Customer satisfaction</p>
+                </div>
+                <div class="panel-body">
+                    <div ui-view="radialGauge"></div>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h3>Updates</h3>
-            <ul>
-                <li>
-                    <h4>First</h4>
-                    <p>Update info</p>
-                    <a href="#">View entire update</a>
-                </li>
-                <li>
-                    <h4>Second</h4>
-                    <p>Update info</p>
-                    <a href="#">View entire update</a>
-                </li>
-                <li>
-                    <h4>Third</h4>
-                    <p>Update info</p>
-                    <a href="#">View entire update</a>
-                </li>
-            </ul>
-            <a href="#" class="btn">All updates</a>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Personal KPI</p>
+                    <h3 class="panel-title">Task completion</h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-view="barChart"></div>
+                    <a class="btn btn-primary">All tasks</a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Projects/Processes</h1> - <a href="#" class="">All projects</a> - <a href="#" class="">All Processes</a>
+    <div class="row top-buffer homepage-rij2">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Tasks</p>
+                    <h3 class="panel-title">Urgent tasks</h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-view="urgentTasks"></div>
+                    <a class="btn btn-primary">All tasks</a>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h2>Project 1</h2>
-            <p>Project stuff</p>
-            <p>some more stuff</p>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Updates</p>
+                    <h3 class="panel-title">Company wide news</h3>
+                </div>
+                <div class="panel-body news-block">
+                    <ul>
+                        <li>
+                            <a href="#">My company now has 100 employees!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                        <li>
+                            <a href="#">20M€ order approved for Client X!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                        <li>
+                            <a href="#">Zero-accident record broken!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary">All company updates</a>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h2>Project 1</h2>
-            <p>Project stuff</p>
-            <p>some more stuff</p>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Updates</p>
+                    <h3 class="panel-title">My Project updates</h3>
+                </div>
+                <div class="panel-body news-block">
+                    <ul>
+                        <li>
+                            <a href="#">My company now has 100 employees!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                        <li>
+                            <a href="#">20M€ order approved for Client X!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                        <li>
+                            <a href="#">Zero-accident record broken!</a>
+                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary">All personal updates</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer homepage-rij3">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Tasks</p>
+                    <h3 class="panel-title">Urgent tasks</h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-view=""></div>
+                    <a class="btn btn-primary">All tasks</a>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
-            <h2>Project 1</h2>
-            <p>Project stuff</p>
-            <p>some more stuff</p>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Risks:</p>
+                    <h3 class="panel-title">Rejects</h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-view="radialGaugeTwo"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Risks</p>
+                    <h3 class="panel-title">Sick leave</h3>
+                </div>
+                <div class="panel-body">
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

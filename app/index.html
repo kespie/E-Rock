@@ -15,6 +15,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
 
+    <!-- AngularChart -->
+    <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
+    <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+    <link rel="stylesheet" href="assets/js/angularChart/angular-chart.css">
+
+    <!-- RadialGauge -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="assets/js/ng-radial-gauge-dir.js"></script>
+
+    <!-- Breadcrumbs -->
+    <script src="assets/js/angular-breadcrumb.min.js"></script>
+
     <script src="app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/filters.js"></script>
@@ -24,44 +36,29 @@
     <script src="components/company/companyCtrl.js"></script>
     <script src="components/personal/personalCtrl.js"></script>
 
-    <script src="shared/projects/myProjectsCtrl.js"></script>
-    <script src="shared/table-data/table-dataCtrl.js"></script>
+    <script src="components/personal/projects/projectsCtrl.js"></script>
+    <script src="components/personal/risks/risksCtrl.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="nav navbar-nav">
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li ng-repeat="item in items" ng-class="{'dropdown-submenu': item.submenu && item.submenu.length}"><a ui-sref="{{item.link}}">{{item.name}}</a>
-                            <ul ng-if="item.submenu && item.submenu.length" class="dropdown-menu">
-                                <li ng-repeat="subitem in item.submenu"><a ui-sref="{{subitem.link}}">{{subitem.name}}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
                 <ul class="nav navbar-nav">
                     <li><a ui-sref="personal" ui-sref-active="active">Personal</a></li>
-                    <li><a ui-sref="company">Company</a></li>
+                    <li><a ui-sref="company" ui-sref-active="active">Company</a></li>
                 </ul>
             </div>
-            <div class="row" ng-show="">
-                <ul class="nav navbar-nav navbar-left">
-                    <li><a ui-sref="personal">Overview</a></li>
-                    <li><a ui-sref="personal.my-projects">My Projects</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div class="view-container">
-        <div class="container">
-            <div class="row">
-                <div ui-view></div>
+            <div class="col-md-6">
             </div>
         </div>
     </div>
-    <footer>
+
+    <div ui-view></div>
+
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <p>I'm the footer</p>

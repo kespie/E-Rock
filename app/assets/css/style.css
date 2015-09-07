@@ -6,3 +6,65 @@
     position:static;
     display:block;
 }
+
+.navbar-nav>li>a{
+    padding:10px 15px;
+}
+
+.top-buffer {
+    margin-top:20px;
+}
+
+.nav>li>a.active{
+    background:#eee;
+}
+
+.btn{
+    margin: 5px 0;
+}
+
+.block-ellipsis {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 49.22666666666667px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.846;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Homepage */
+
+.homepage-rij1 .panel{
+    height:350px;
+}
+
+.homepage-rij2 .panel {
+    height:450px;
+}
+
+.homepage-rij2 .panel a.btn{
+    position: absolute;
+    bottom: 45px;
+}
+
+.homepage-rij3 .panel {
+    height:350px;
+}
+
+.news-block ul{
+    list-style:none;
+    padding-left:0;
+}
+
+.news-block ul li {
+    margin-bottom:20px;
+}
+
+.news-block ul li a{
+    font-size:1.2em;
+}

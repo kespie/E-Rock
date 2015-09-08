@@ -1,0 +1,32 @@
+a{
+    color:#695e4a;
+}
+
+a:hover, a:active{
+    color:#7B705E;
+}
+
+.menu-bar{
+    width:100%;
+    background-color: rgb(255, 210, 0);
+}
+
+.logo{
+    background-image:url('../img/logo.gif');
+    background-repeat:no-repeat;
+    height:49px;
+    width:212px;
+    background-color: #fff;
+}
+
+.panel-default>.panel-heading, .panel-header-btn{
+    background-color: rgb(255, 210, 0);
+}
+
+.btn-primary, .btn-primary:active{
+    background-image: radial-gradient(circle, #695e4a 80%, #7B705E 81%);
+}
+
+.btn-primary:hover{
+    border-color: #7B705E;
+}

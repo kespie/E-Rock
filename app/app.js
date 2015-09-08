@@ -10,6 +10,13 @@ var eRockApp = angular.module('eRockApp', [
     'ncy-angular-breadcrumb'
 ]);
 
+angular.module('eRockApp').controller('mainController', function ($scope) {
+    $scope.theme = 'Basic';
+    $scope.switch = function(){
+        $scope.theme = ($scope.theme === 'Basic') ? 'SecondFloor' : 'Basic';
+    };
+});
+
 eRockApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, $uiViewScrollProvider) {
     $stateProvider
 

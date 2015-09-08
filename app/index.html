@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="eRockApp">
+<html ng-app="eRockApp" ng-controller="mainController">
 <head lang="en">
     <meta charset="UTF-8">
     <title>E-Rock</title>
@@ -9,11 +9,11 @@
 
     <!-- load bootstrap from CDN and custom CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Vertical tabs bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.vertical-tabs.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- load angular and angular-route via CDN -->
     <script src="assets/js/angular.min.js"></script>
@@ -48,13 +48,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="assets/css/style{{theme}}.css">
+
 </head>
 
 <body>
     <div class="menu-bar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
+                    <div class="logo" ui-sref="personal"></div>
+                </div>
+                <div class="col-md-4">
                     <div class="dropdown pull-left">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <i class="fa fa-bars"></i>
@@ -65,11 +70,10 @@
                             <li><a href="#">KPI</a></li>
                             <li><a href="#">Tasks</a></li>
                         </ul>
-                    </div>                    <ul class="nav navbar-nav">
-                        <li><a ui-sref="personal" ui-sref-active="active">Personal</a></li>
-                    </ul>
+                    </div>
+                    <a class="menu-item" ui-sref="personal" ui-sref-active="active">Personal</a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="dropdown pull-left">
                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <i class="fa fa-bars"></i>
@@ -80,10 +84,10 @@
                             <li><a href="#">Processes</a></li>
                             <li><a href="#">KPI's</a></li>
                         </ul>
-                    </div>                    <ul class="nav navbar-nav">
-                        <li><a ui-sref="company" ui-sref-active="active">Company</a></li>
-                    </ul>
+                    </div>
+                    <a class="menu-item" ui-sref="company" ui-sref-active="active">Company</a>
                 </div>
+                <a href="" ng-click="switch()" class="btn btn-default pull-right" style="position:absolute;right:0;">Switch!</a>
             </div>
         </div>
     </div>

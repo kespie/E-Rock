@@ -44,7 +44,6 @@ angular.module('eRockControllers').controller('radialGaugeCtrl', function ($scop
 angular.module('eRockControllers').controller('barChartCtrl', function ($scope) {
     $scope.labels = ['Project A', 'Project B', 'Project C'];
     $scope.series = ['Series A'];
-
     $scope.data = [
         [65, 59, 80]
     ];
@@ -57,8 +56,8 @@ angular.module('eRockControllers').controller('urgentTasksCtrl', function ($scop
         { task: 'Declaration B', prio: 'High', dd: '5 hours' },
         { task: 'Business Case A', prio: 'High', dd: '2 days' },
         { task: 'Update eRock', prio: 'High', dd: '1 week' },
-        { task: 'Check contract C', prio: 'Medium', dd: '2 weeks' },
-        { task: 'Request holiday', prio: 'Low', dd: '3 weeks' }
+        { task: 'Check contract C', prio: 'Medium', dd: '2 weeks' }
+        // { task: 'Request holiday', prio: 'Low', dd: '3 weeks' }
     ];
 });
 

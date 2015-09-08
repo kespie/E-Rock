@@ -10,7 +10,7 @@
             <div ncy-breadcrumb></div>
         </div>
     </div>
-    <div class="row top-buffer homepage-rij1">
+    <div class="row homepage-rij1">
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -77,10 +77,10 @@
                             <a href="#">20M€ order approved for Client X!</a>
                             <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
                         </li>
-                        <li>
-                            <a href="#">Zero-accident record broken!</a>
-                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
-                        </li>
+                        <!--<li>-->
+                            <!--<a href="#">Zero-accident record broken!</a>-->
+                            <!--<p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>-->
+                        <!--</li>-->
                     </ul>
                     <a class="btn btn-primary">All company updates</a>
                 </div>
@@ -102,10 +102,10 @@
                             <a href="#">20M€ order approved for Client X!</a>
                             <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
                         </li>
-                        <li>
-                            <a href="#">Zero-accident record broken!</a>
-                            <p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>
-                        </li>
+                        <!--<li>-->
+                            <!--<a href="#">Zero-accident record broken!</a>-->
+                            <!--<p class="block-ellipsis">Lorem ipsum dolor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enlor sit amet, consectetuer adipiscing elit pretium quis, sem. Nulla consequat massa quis enim.</p>-->
+                        <!--</li>-->
                     </ul>
                     <a class="btn btn-primary">All personal updates</a>
                 </div>
@@ -127,13 +127,15 @@
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
+                <a ui-sref="rejects" class="panel-header-btn">
                 <div class="panel-heading">
                     <p>Risks:</p>
                     <h3 class="panel-title">Rejects</h3>
                 </div>
+                </a>
                 <div class="panel-body">
-                    <a ><div ui-view="radialGaugeTwo"></div></a>
-                    <a ui-sref="rejects" class="btn btn-primary">All personal risks</a>
+                    <a ui-sref="rejects"><div ui-view="radialGaugeTwo"></div></a>
+                    <a class="btn btn-primary">All personal risks</a>
                 </div>
             </div>
         </div>

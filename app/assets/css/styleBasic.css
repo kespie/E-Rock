@@ -1,0 +1,16 @@
+.menu-bar{
+    width:100%;
+    background-color: #EAF1F5;
+}
+
+.logo{
+    background-image:url('../img/eBlock-logo.png');
+    background-repeat:no-repeat;
+    height: 49px;
+    width: 228px;
+    background-size: cover;
+}
+
+.panel-default>.panel-heading{
+    background-color: #EAF1F5;
+}

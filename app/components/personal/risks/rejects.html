@@ -1,0 +1,258 @@
+<div class="container rejects">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Rejects</h2>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-12">
+            <ol class="breadcrumb ng-isolate-scope">
+                <li><!-- ngSwitchWhen: false --><!-- ngSwitchWhen: true -->
+                    <span class="ng-binding ng-scope">Personal</span>
+                </li>
+                <li><!-- ngSwitchWhen: false --><!-- ngSwitchWhen: true -->
+                    <span class="ng-binding ng-scope">Risks</span>
+                </li>
+                <li><!-- ngSwitchWhen: false --><!-- ngSwitchWhen: true -->
+                    <span class="ng-binding ng-scope">Rejects</span>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Risks</p>
+                    <h3 class="panel-title">Rejects</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-2"> <!-- required for floating -->
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs tabs-left sideways">
+                            <li class="active"><a href="#home" data-toggle="tab">Info</a></li>
+                            <li><a href="#relations" data-toggle="tab">Relations</a></li>
+                            <li><a href="#export" data-toggle="tab">Export</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-10">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="home">
+                                <ul>
+                                    <li><b>Name:</b> Reject No1</li>
+                                    <li><b>Appetite:</b> Medium</li>
+                                    <li><b>Impact:</b> High</li>
+                                    <li><b>Likelihood:</b> Low</li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane" id="relations">
+                                Relations
+                            </div>
+                            <div class="tab-pane" id="export">
+                                Export
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Risks</p>
+                    <h3 class="panel-title">Rejects</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="text-center" width="300" ng-radial-gauge ranges="ranges" value="value" value-unit="unit" precision="precision" lower-limit="lowerLimit" upper-limit="upperLimit"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Risks</p>
+                    <h3 class="panel-title">History</h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-view="barChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-12">
+            <h2 class="text-center">RACI</h2>
+
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a data-toggle="tab" href="#all">All</a></li>
+                <li><a data-toggle="tab" href="#responsible">Responsible</a></li>
+                <li><a data-toggle="tab" href="#accountable">Accountable</a></li>
+                <li><a data-toggle="tab" href="#consulted">Consulted</a></li>
+                <li><a data-toggle="tab" href="#informed">Informed</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="all" class="tab-pane fade in active">
+                    <div ui-view="table"></div>
+                </div>
+                <div id="responsible" class="tab-pane fade">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <td>
+                                <a href="#" ng-click="sortType = 'task'; sortReverse = !sortReverse">
+                                    <span>Role/Organization</span>
+                                    <span ng-show="sortType == 'task' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'task' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'prio'; sortReverse = !sortReverse">
+                                    <span>Value (%)</span>
+                                    <span ng-show="sortType == 'prio' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'prio' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'dd'; sortReverse = !sortReverse">
+                                    <span>Holder</span>
+                                    <span ng-show="sortType == 'dd' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'dd' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Head Manufacturing</td>
+                                <td>25</td>
+                                <td>Martijn Weekenstroo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="accountable" class="tab-pane fade">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <td>
+                                <a href="#" ng-click="sortType = 'task'; sortReverse = !sortReverse">
+                                    <span>Role/Organization</span>
+                                    <span ng-show="sortType == 'task' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'task' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'prio'; sortReverse = !sortReverse">
+                                    <span>Value (%)</span>
+                                    <span ng-show="sortType == 'prio' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'prio' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'dd'; sortReverse = !sortReverse">
+                                    <span>Holder</span>
+                                    <span ng-show="sortType == 'dd' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'dd' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Manufacturing Assistant</td>
+                            <td>15</td>
+                            <td>Eelco Bosklopper</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="consulted" class="tab-pane fade">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <td>
+                                <a href="#" ng-click="sortType = 'task'; sortReverse = !sortReverse">
+                                    <span>Role/Organization</span>
+                                    <span ng-show="sortType == 'task' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'task' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'prio'; sortReverse = !sortReverse">
+                                    <span>Value (%)</span>
+                                    <span ng-show="sortType == 'prio' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'prio' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'dd'; sortReverse = !sortReverse">
+                                    <span>Holder</span>
+                                    <span ng-show="sortType == 'dd' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'dd' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Assist to the regional manager</td>
+                            <td>1</td>
+                            <td>Kasper Kisjes</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="informed" class="tab-pane fade">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                            <td>
+                                <a href="#" ng-click="sortType = 'task'; sortReverse = !sortReverse">
+                                    <span>Role/Organization</span>
+                                    <span ng-show="sortType == 'task' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'task' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'prio'; sortReverse = !sortReverse">
+                                    <span>Value (%)</span>
+                                    <span ng-show="sortType == 'prio' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'prio' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#" ng-click="sortType = 'dd'; sortReverse = !sortReverse">
+                                    <span>Holder</span>
+                                    <span ng-show="sortType == 'dd' && !sortReverse" class="fa fa-caret-down"></span>
+                                    <span ng-show="sortType == 'dd' && sortReverse" class="fa fa-caret-up"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>Head Manufacturing</td>
+                            <td>25</td>
+                            <td>Martijn Weekenstroo</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>

@@ -2,15 +2,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <ul class="nav navbar-nav navbar-left">
-                <li><a ui-sref="personal">Overview</a></li>
-                <li><a ui-sref="personal.projects" ui-sref-active="active">Projects</a></li>
-                <li><a ui-sref="personal.risks" ui-sref-active="active">Risks</a></li>
-            </ul>
+            <h2>Personal</h2>
         </div>
     </div>
     <div class="row top-buffer">
-        <div clas="col-md-12">
+        <div class="col-md-12">
             <div ncy-breadcrumb></div>
         </div>
     </div>
@@ -18,22 +14,24 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Company KPI</h3>
-                    <p>Weighted order value</p>
+                    <p>Company KPI</p>
+                    <h3 class="panel-title">Weighted order value</h3>
                 </div>
                 <div class="panel-body">
                     <div ui-view="lineChart"></div>
+                    <a class="btn btn-primary">All company KPI's</a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Company KPI</h3>
-                    <p>Customer satisfaction</p>
+                    <p>Company KPI</p>
+                    <h3 class="panel-title">Customer satisfaction</h3>
                 </div>
                 <div class="panel-body">
                     <div ui-view="radialGauge"></div>
+                    <a class="btn btn-primary">All company KPI's</a>
                 </div>
             </div>
         </div>
@@ -45,7 +43,7 @@
                 </div>
                 <div class="panel-body">
                     <div ui-view="barChart"></div>
-                    <a class="btn btn-primary">All tasks</a>
+                    <a class="btn btn-primary">All personal KPI's</a>
                 </div>
             </div>
         </div>
@@ -119,11 +117,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <p>Tasks</p>
-                    <h3 class="panel-title">Urgent tasks</h3>
+                    <h3 class="panel-title">Hours spent per Project (September)</h3>
                 </div>
                 <div class="panel-body">
-                    <div ui-view=""></div>
-                    <a class="btn btn-primary">All tasks</a>
+                    <div ui-view="pieChart"></div>
+                    <a class="btn btn-primary">All personal tasks</a>
                 </div>
             </div>
         </div>
@@ -134,7 +132,8 @@
                     <h3 class="panel-title">Rejects</h3>
                 </div>
                 <div class="panel-body">
-                    <div ui-view="radialGaugeTwo"></div>
+                    <a ><div ui-view="radialGaugeTwo"></div></a>
+                    <a ui-sref="rejects" class="btn btn-primary">All personal risks</a>
                 </div>
             </div>
         </div>
@@ -145,7 +144,8 @@
                     <h3 class="panel-title">Sick leave</h3>
                 </div>
                 <div class="panel-body">
-
+                    <div ui-view="barChartTwo"></div>
+                    <a class="btn btn-primary">All personal tasks</a>
                 </div>
             </div>
         </div>

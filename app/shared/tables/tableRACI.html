@@ -1,0 +1,35 @@
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <td>
+            <a href="#" ng-click="sortType = 'task'; sortReverse = !sortReverse">
+                <span>Role/Organization</span>
+                <span ng-show="sortType == 'task' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType == 'task' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+        </td>
+        <td>
+            <a href="#" ng-click="sortType = 'prio'; sortReverse = !sortReverse">
+                <span>Value (%)</span>
+                <span ng-show="sortType == 'prio' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType == 'prio' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+        </td>
+        <td>
+            <a href="#" ng-click="sortType = 'dd'; sortReverse = !sortReverse">
+                <span>Holder</span>
+                <span ng-show="sortType == 'dd' && !sortReverse" class="fa fa-caret-down"></span>
+                <span ng-show="sortType == 'dd' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+        </td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="tableItem in tableContent | orderBy:sortType:sortReverse">
+        <td>{{ tableItem.task }}</td>
+        <td>{{ tableItem.prio }}</td>
+        <td>{{ tableItem.dd }}</td>
+    </tr>
+    </tbody>
+</table>

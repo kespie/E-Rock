@@ -269,7 +269,7 @@ angular.module("ngRadialGauge",[]).directive('ngRadialGauge', ['$window', '$time
                          .attr("text-anchor", "middle")
                          .attr("font-weight", "bold")
                          .style("font", fontStyle)
-                         .text('[ ' + value.toFixed(precision) + valueUnit + ' ]');
+                         .text('' + value.toFixed(precision) + valueUnit + '');
                  }
 
                  var circleRadius = (width * 6) / 300;

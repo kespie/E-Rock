@@ -1,3 +1,8 @@
+.menu-bar{
+    width:100%;
+    background-color: #EAF1F5;
+}
+
 .nav {
     position:relative;
 }
@@ -9,6 +14,7 @@
 
 .navbar-nav>li>a{
     padding:10px 15px;
+    font-size: 1.5em;
 }
 
 .top-buffer {
@@ -21,6 +27,27 @@
 
 .btn{
     margin: 5px 0;
+}
+
+.panel {
+    height:450px;
+}
+
+.panel a.btn{
+    position: absolute;
+    bottom: 45px;
+}
+
+.panel-default>.panel-heading{
+    background-color: #EAF1F5;
+}
+
+.mtt-majorGraduationText {
+    display:none;
+}
+
+.mtt-graduationValueText{
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
 .block-ellipsis {
@@ -39,23 +66,6 @@
 
 /* Homepage */
 
-.homepage-rij1 .panel{
-    height:350px;
-}
-
-.homepage-rij2 .panel {
-    height:450px;
-}
-
-.homepage-rij2 .panel a.btn{
-    position: absolute;
-    bottom: 45px;
-}
-
-.homepage-rij3 .panel {
-    height:350px;
-}
-
 .news-block ul{
     list-style:none;
     padding-left:0;
@@ -67,4 +77,28 @@
 
 .news-block ul li a{
     font-size:1.2em;
+}
+
+
+/* Other shite */
+.rejects .table-bordered>thead>tr>th, .rejects .table-bordered>thead>tr>td{
+    width:33%;
+    text-align:center;
+}
+
+.rejects .table-bordered>tbody>tr>td{
+    text-align: center;
+}
+
+.sideways.tabs-left{
+    left:-85px;
+}
+
+.sideways{
+    margin-top: 42px;
+}
+
+.tab-content ul{
+    list-style: none;
+    padding: 0;
 }

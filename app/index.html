@@ -8,21 +8,25 @@
     <!-- based on: https://github.com/angular/angular-phonecat -->
 
     <!-- load bootstrap from CDN and custom CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <!-- Vertical tabs bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.vertical-tabs.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- load angular and angular-route via CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-ui-router.min.js"></script>
 
     <!-- AngularChart -->
-    <script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
-    <script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+    <script src="assets/js/angularChart/Chart.min.js"></script>
+    <script src="assets/js/angularChart/angular-chart.min.js"></script>
     <link rel="stylesheet" href="assets/js/angularChart/angular-chart.css">
 
     <!-- RadialGauge -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="assets/js/ng-radial-gauge-dir.js"></script>
+    <script src="assets/js/ngRadialGauge/d3.v3.min.js" charset="utf-8"></script>
+    <script src="assets/js/ngRadialGauge/ng-radial-gauge-dir.js"></script>
 
     <!-- Breadcrumbs -->
     <script src="assets/js/angular-breadcrumb.min.js"></script>
@@ -38,20 +42,48 @@
 
     <script src="components/personal/projects/projectsCtrl.js"></script>
     <script src="components/personal/risks/risksCtrl.js"></script>
+    <script src="components/personal/risks/rejectsCtrl.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <ul class="nav navbar-nav">
-                    <li><a ui-sref="personal" ui-sref-active="active">Personal</a></li>
-                    <li><a ui-sref="company" ui-sref-active="active">Company</a></li>
-                </ul>
-            </div>
-            <div class="col-md-6">
+    <div class="menu-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Risks</a></li>
+                            <li><a href="#">KPI</a></li>
+                            <li><a href="#">Tasks</a></li>
+                        </ul>
+                    </div>                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="personal" ui-sref-active="active">Personal</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Projects</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Processes</a></li>
+                            <li><a href="#">KPI's</a></li>
+                        </ul>
+                    </div>                    <ul class="nav navbar-nav">
+                        <li><a ui-sref="company" ui-sref-active="active">Company</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -61,7 +93,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <p>I'm the footer</p>
+
             </div>
         </div>
     </footer>

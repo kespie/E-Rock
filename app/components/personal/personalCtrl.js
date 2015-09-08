@@ -97,3 +97,16 @@ angular.module('eRockControllers').controller('radialGaugeTwoCtrl', function ($s
     ];
 });
 
+angular.module('eRockControllers').controller('barChartTwoCtrl', function ($scope) {
+    $scope.labels = ["Week 16", " Week 17", "Week 18", "Week 19", "Week 20", "Week 21", "Week 22"];
+    $scope.series = ['Hours'];
+    $scope.data = [
+        [23, 15, 0, 3, 10, 11, 6]
+    ];
+});
+
+angular.module('eRockControllers').controller('pieChartCtrl', function ($scope) {
+    $scope.labels = ["Project A", "Project B", "Project C", "Project D"];
+    $scope.data = [30, 20, 3, 57];
+});
+

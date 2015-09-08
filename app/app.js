@@ -39,9 +39,17 @@ eRockApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, 
                     templateUrl:'shared/tables/tableBlock.html',
                     controller:'urgentTasksCtrl'
                 },
+                'pieChart@personal':{
+                    templateUrl:'shared/charts/pieChart.html',
+                    controller:'pieChartCtrl'
+                },
                 'radialGaugeTwo@personal':{
                     templateUrl:'shared/charts/radialGaugeChart.html',
                     controller:'radialGaugeTwoCtrl'
+                },
+                'barChartTwo@personal':{
+                    templateUrl:'shared/charts/barChart.html',
+                    controller:'barChartTwoCtrl'
                 }
             }
         })
@@ -61,6 +69,15 @@ eRockApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, 
             parent: 'personal',
             ncyBreadcrumb: {
                 label: 'Risks'
+            }
+        })
+        .state('personal.risks.rejects', {
+            url: '/rejects',
+            templateUrl: 'components/personal/risks/rejects.html',
+            controller:'risksCtrl',
+            parent: 'personal.risks',
+            ncyBreadcrumb: {
+                label: 'Rejects'
             }
         })
 
@@ -86,6 +103,26 @@ eRockApp.config(function($stateProvider, $urlRouterProvider, $locationProvider, 
                 'barCharts@company':{
                     templateUrl: 'shared/charts/barChart.html',
                     controller:'barChartCompanyCtrl'
+                }
+            }
+        })
+        .state('rejects', {
+            url: '/rejects',
+            ncyBreadcrumb: {
+                label: 'Rejects'
+            },
+            views: {
+                '': {
+                    controller:'rejectsCtrl',
+                    templateUrl: 'components/personal/risks/rejects.html'
+                },
+                'barChart@rejects':{
+                    templateUrl:'shared/charts/barChart.html',
+                    controller:'rejectsBarChartCtrl'
+                },
+                'table@rejects':{
+                    templateUrl:'shared/tables/tableRACI.html',
+                    controller:'rejectsTableCtrl'
                 }
             }
         });
